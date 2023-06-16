@@ -17,15 +17,19 @@
       </div>
 
       <nav>
-        <label for="toggle-menu" id="toggle-menu"><i class="fa-solid fa-bars" style="color: #fffffe;"></i></label>
+        <label for="toggle-menu" class="toggle-menu"><i class="fa-solid fa-bars" style="color: #fffffe;"></i></label>
         <input type="checkbox" id="toggle-menu">
         <ul class="navbar-list">
-          <li><a href="#hero">Inicion</a></li>
-          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#about">Acerca de</a></li>
           <li><a href="#cards">Promociones</a></li>
           <li><a href="#contacto">Contactanos</a></li>
         </ul>
-        <label for="account" id="account"><i class="fa-solid fa-user" style="color: #ffffff;"></i></label>
+        <div class="btns">
+          <button class="btn btn-account">Regístrarse</button>
+          <button class="btn btn-account">Iniciar Sesion </button>
+        </div>
+        <label for="account" class="account"><i class="fa-solid fa-user" style="color: #ffffff;"></i></label>
         <input type="checkbox" id="account">
       </nav>
     </header>
@@ -36,21 +40,14 @@
         <div class="hero__info">
           <h2>¡Bienvenido al Cine Fernández: tu destino para una experiencia cinematográfica épica!</h2>
           <p>Disfruta la magia del cine en pantalla grande y vive emociones intensas con las mejores películas.</p>
-          <button class="btn">Ver Catalogo</button>
+          <button class="btn btn-catalogo">Ver Catalogo</button>
         </div>
 
-        <!-- <div class="hero__container-buttons-info">
-          <p>Inicia sesión o Registrate si aun no lo has hecho para conseguir tus entradas y disfrutar de una experiencia cinéfila inolvidable.</p>
-          <div class="btns">
-            <button class="btn">Iniciar Sesion </button>
-            <button class="btn">Regístrarse Ahora</button>
-          </div>
-        </div> -->
       </section>
 
       <!-- Seccion About -->
       <section id="about">
-        <h2>Nosotros</h2>
+        <h2>Acerca de Nosotros</h2>
         <h3 class="about__mision">Nuestra misión es brindarte la mejor experiencia cinematográfica en la comodidad de nuestras modernas salas.</h3>
 
         <div class="about__caracteristicas">
@@ -82,6 +79,7 @@
       <!-- Seccion Cards -->
       <section id="cards">
         <h2>Ofertas y Sorteos</h2>
+
         <div class="container__cards">
 
           <div class="card">
@@ -90,7 +88,7 @@
               <h3>Gana un kit de merchandising de Spiderman</h3>
               <p>Compra ya tus entradas online para ver la película y participa hasta el 18 de junio. ¡Y si compras tus entradas para el fin de semana del estreno, también podrás llevarte un póster de la película! ¡Date prisa y usa tus superpoderes para ganar!</p>
             </div>
-            <a href="#">!Lo Quiero¡ ></a>
+            <a href="#">!Lo Quiero¡</a>
           </div>
 
           <div class="card">
@@ -99,7 +97,7 @@
               <h3>Cine en familia al mejor precio</h3>
               <p>Disfruta de un mejor precio en tus entradas para el cine si vas en familia. Pueden acceder a la promoción todos los días de la semana para funciones hasta las 21:00 ¡Válido para un mínimo de dos personas!</p>
             </div>
-            <a href="#">!Mas info¡ ></a>
+            <a href="#">!Mas info¡</a>
           </div>
 
           <div class="card">
@@ -108,10 +106,11 @@
               <h3>¡PARA AUTÉNTICOS FANS DEL CINE!</h3>
               <p>¡Lo estabas esperando! Suscríbete y podrás disfrutar de las mejores historias y emociones en pantalla grande, todas las veces que quieras, ¡estrenos incluidos! </p>
             </div>
-            <a href="#">!Lo Quiero¡ ></a>
+            <a href="#">!Lo Quiero¡</a>
           </div>
         </div>
-        <button>Ver todas las ofertas y sorteos</button>
+        
+        <button class="btn">Ver todas las ofertas y sorteos</button>
       </section>
 
       <!-- Seccion Contacto -->
@@ -125,7 +124,7 @@
             <li>+54 9 385 XXX XXXX</li>
             <li>consultas@cinefernandez.com</li>
             <li class="contacto__redes-sociales">
-              Visita nuestras redes sociales
+              Visita nuestras redes sociales 
               <div>
                 <a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
                 
@@ -156,6 +155,7 @@
             <a href="#"><i class="fa-brands fa-tiktok" style="color: #ffffff;"></i></a>
           </div>
         </div>
+        
         <div class="footer__info-cartelera">
           <h5>Cartelera</h5>
           <ul>

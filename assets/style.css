@@ -2,6 +2,8 @@
 
 :root{
 --background: #000000;
+--bkg-secondary: #0f0e17;
+--bkg-tertiary: #242629;
 --text-white: #fffffe;
 --parrafo: #94a1b2;
 --purple: #7f5af0;
@@ -55,21 +57,50 @@ header{
 .navbar-list{
   display: flex;
   gap: 25px;
-  margin-right: 20px;
+  margin-right: 80px;
+  font-size: 1.2rem;
+  font-weight: 600;
+
 }
+
 
 nav{
   display: flex;
   align-items: center;  
 }
 
-nav i{
-  font-size: 32px;
+.btn{
   cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
+.btn-account{
+  background-color: var(--red);
+  padding: 5px 10px ;
+  border-radius: 0px;
+}
+
+.btn:first-child{
+  background-color: var(--bkg-tertiary);
+}
+
+
+/* Esto es para el icono de cuenta */
+nav i{
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+/* Esto es para ocultar los iconos y checkbox de menu hamburguesa y cuenta */
 #toggle-menu,
-#account{
+#account,
+.toggle-menu,
+.account{
   display: none;
 }
 
@@ -97,14 +128,13 @@ nav i{
 .hero__info p{
   width: 60%;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
-.btn{
+.btn-catalogo{
   background-color: var(--red);
+  width: 200px;
   padding: 10px 15px;
-  border-radius: 5px;
-  border: none;
-  width: 250px;
 }
 
 /* Seccion About */
@@ -117,13 +147,22 @@ nav i{
   justify-content: center;
 }
 
+#about h2{
+  font-size: 1.8rem;
+}
+
+.about__mision{
+  font-style: italic;
+}
+
 .about__caracteristicas{
   display: flex;
   justify-content: space-evenly;
+  max-width: 1600px;
 }
 
 .about__caracteristicas img{
-  width: 40%;
+  width: 560px;
 }
 
 .about__caracteristicas__info{
@@ -132,6 +171,10 @@ nav i{
   flex-direction: column;
   gap: 20px;
   justify-content: center;
+}
+
+.about__caracteristicas__info p{
+  color: var(--parrafo);
 }
 
 /* Seccion Cards */
@@ -144,13 +187,25 @@ nav i{
   gap: 50px;
 }
 
+#cards h2{
+  font-size: 1.8rem;
+}
+
+#cards p{
+  font-size: 1.2rem;
+  color: var(--parrafo);
+}
+
 .container__cards{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  width: 100%;
+  gap: 50px;
 }
 
 .card{
   width: 30%;
+  max-width: 400px;
   height: 500px;
   /* box-shadow: 0px 8px 24px rgba(229, 49, 112, 0.2); */
   padding: 10px;
@@ -158,6 +213,7 @@ nav i{
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid gray;
+  border-bottom-right-radius: 50px;
 }
 
 .card__info{
@@ -167,10 +223,16 @@ nav i{
   gap: 10px;
 }
 
+.card__info p{
+  color: var(--parrafo);
+}
+
 #cards button{
   padding: 10px 20px;
   background-color: var(--orange);
   border: none;
+  font-size: 1.18rem;
+  border-radius: 10px;
 }
 
 
@@ -182,29 +244,45 @@ nav i{
 #contacto h2{
   text-align: center;
   padding-bottom: 60px;
+  font-size: 1.8rem;
 }
 
 .contacto__container-info{
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 100px;
+}
+
+iframe{
+  width: 40%;
+  max-width: 800px;
 }
 
 .lista-info{
   width: 40%;
+  max-width: 800px;
 }
 
+.lista-info li{
+  margin: 15px 0;
+}
+
+/* Iconos de redes sociales */
+.contacto__redes-sociales{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .contacto__redes-sociales i{
   font-size: 32px;
+  padding: 0 5px;
 }
 
 
 /* ------ F O O T E R ------ */
 footer{
-  background-color: rgb(26, 26, 30);
-  /* display: flex;
-  flex-direction: column;
-  gap: 30px; */
+  background-color: var(--bkg-tertiary)
 }
 
 /* Seccion Info */
@@ -213,6 +291,8 @@ footer{
   grid-template-columns: repeat(4,1fr);
   justify-items: center;
   padding: 30px 0;
+  max-width: 1600px;
+  margin: auto;
 }
 
 .footer__info-encabezado--title{
@@ -227,6 +307,18 @@ footer{
   gap: 30px;
   justify-content: center;
   font-size: 22px;
+}
+
+.footer__seccion-info h5{
+  font-size: 1rem;
+  color: var(--bkg-secondary);
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.footer__seccion-info a{
+  color: var(--bkg-secondary);
+  font-weight: 600;
 }
 
 /* Seccion Creador */
