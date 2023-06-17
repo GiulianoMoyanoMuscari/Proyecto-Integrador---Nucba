@@ -56,17 +56,23 @@ header{
 
 .navbar-list{
   display: flex;
+  align-items: center;
   gap: 25px;
-  margin-right: 80px;
   font-size: 1.2rem;
   font-weight: 600;
-
 }
 
+.separador-li{
+  width: 1px;
+  height: 1.2rem;
+  background-color: white ;
+  
+}
 
-nav{
+.btns{
   display: flex;
-  align-items: center;  
+  flex-direction: column;
+  gap: 10px;
 }
 
 .btn{
@@ -98,9 +104,7 @@ nav i{
 
 /* Esto es para ocultar los iconos y checkbox de menu hamburguesa y cuenta */
 #toggle-menu,
-#account,
-.toggle-menu,
-.account{
+.toggle-menu{
   display: none;
 }
 
@@ -153,6 +157,7 @@ nav i{
 
 .about__mision{
   font-style: italic;
+  text-align: center;
 }
 
 .about__caracteristicas{
@@ -162,7 +167,8 @@ nav i{
 }
 
 .about__caracteristicas img{
-  width: 560px;
+  max-width: 560px;
+  width: 40%;
 }
 
 .about__caracteristicas__info{
@@ -221,6 +227,11 @@ nav i{
   flex-direction: column;
   align-items: center;
   gap: 10px;
+}
+
+.card__info img{
+  max-width: 370px;
+  width: 100%;
 }
 
 .card__info p{
@@ -324,6 +335,6 @@ footer{
 /* Seccion Creador */
 .footer__seccion-creador{
   text-align: center;
-  border-top: 2px solid var(--background);
+  border-top: 1px solid var(--background);
   padding: 15px 0;
 }

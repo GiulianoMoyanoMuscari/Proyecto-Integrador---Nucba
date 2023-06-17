@@ -1,0 +1,275 @@
+@media (max-width:1440px){
+  /* Seccion Cards */
+  /* Esto es para que el contenido de las cards no se desborde */
+  .card{
+    height: auto;
+    gap: 20px;
+  }
+
+  /* Seccion Contacto */
+  /* Acomodar el elemento de lista que contiene las redes sociales */
+  .contacto__redes-sociales{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width:1024px){
+  /* H E A D E R */
+  /* Esto es para que aparezca el menu hamburguesa y desaparezca el navbar-list*/
+  .toggle-menu{
+    display: block;
+  }
+
+  .navbar-list{
+    display: none;
+  }
+
+  /* Aca creamos como se vera el navbar-list */
+  .navbar-list{
+    position: absolute;
+    top: 65px;
+    right: 0;
+    height: 100vh;
+    width: 425px;
+    max-width: 100vw;
+    z-index: 2;
+    background-color: var(--background);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 40px;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  .separador-li{
+    width: 90%;
+    height: 1px;
+    background-color: var(--orange);
+  }
+
+  /* Aca creamos la funcionalidad para que aparezca el Navbar-list cuando clickamos el menu-hamburguesa */
+  #toggle-menu:checked + .navbar-list{
+    display: flex;
+  }
+}
+
+@media (max-width:992px){
+  /* Seccion Hero */
+  #hero{
+    padding: 65px 20px;
+  }
+
+
+
+  /* Seccion Cards */
+  .card{
+    max-height: 580px;
+    min-height: 400px;
+  }
+
+  /* Esto es para que el texto no se desborde de la card */
+  .card__info p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8; /* Número de líneas de texto a mostrar */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+  /* F O O T E R */
+  .footer__seccion-info{
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+  }
+
+  .footer__info-encabezado{
+    grid-column: 1 / 4;
+  }
+}
+
+@media (max-width:768px){
+  /* Seccion Hero */
+  #hero{
+    padding: 20px;
+  }
+
+  .hero__info{
+    width: 100%;
+  }
+
+  .hero__info p{
+    width: 90%;
+  }
+
+  /* Container Cards */
+  .container__cards{
+    gap: 20px;
+  }
+
+  .card{
+    width: 32%;
+  }
+}
+
+@media (max-width:700px){
+  /* Seccion hero */
+  .hero__info{
+    gap: 15px;
+  }
+
+
+  /* Seccion About */
+  .about__caracteristicas{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .about__caracteristicas:nth-child(even){
+    flex-direction: column;
+  }
+
+  .about__caracteristicas img{
+    width: 50%;
+  }
+  .about__caracteristicas__info{
+    width: 80%;
+    text-align: center;
+  }
+
+  /* Seccion Cards */
+  #cards{
+    gap: 35px;
+  }
+  .container__cards{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card{
+    width: 60%;
+  }
+
+  /* Seccion Contacto */
+  #contacto h2{
+    padding-bottom: 30px;
+  }
+
+  .contacto__container-info{
+    gap: 30px;
+  }
+
+  .lista-info{
+    width: 45%;
+  }
+
+  iframe{
+    width: 45%;
+  }
+
+  /* F O O T E R */
+  .footer__seccion-info{
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width:576px){
+  /* Seccion Hero */
+  .hero__info h2{
+    font-size: 1.8rem;
+  }
+
+  .hero__info p{
+    font-size: 1.3rem;
+  }
+
+  .btn-catalogo{
+    font-size: 1rem;
+    width: 150px;
+    padding: 5px 10px;
+  }
+
+  /* Seccion Contacto */
+  .contacto__container-info{
+    flex-direction: column-reverse;
+  }
+
+  iframe{
+    width: 70%;
+    height: 200px;
+  }
+
+  .lista-info{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 20px;
+  }
+
+  .contacto__redes-sociales{
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* F O O T E R */
+  .footer__seccion-info{
+    gap: 20px;
+  }
+}
+
+@media (max-width:500px){
+  /* Seccion Hero */
+  #hero{
+    padding: 0px 20px;
+  }
+
+  .hero__info h2 span{
+    display: none;
+  }
+
+  /* Seccion Cards */
+  #cards .btn{
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  /* Seccion Contacto */
+  .contacto__redes-sociales p{
+    width: 40%;
+  }
+
+  .contacto__redes-sociales i{
+    font-size: 28px;
+  }
+}
+
+@media (max-width:425px){
+  #hero{
+    background-image: none;
+    padding: 0;
+  }
+
+
+  .hero__info h2{
+    width: 100vw;
+    padding: 0 10px;
+    background-image: url(img/Cine-hero.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:center ;
+  }
+
+  .hero__info p{
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  .btn-catalogo{
+    position: relative;
+    left: 10px;
+  }
+}
