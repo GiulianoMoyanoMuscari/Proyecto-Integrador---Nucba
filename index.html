@@ -2,55 +2,83 @@
 <html lang="es-en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto Integrador</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/mediaqueris.css">
+    <link rel="stylesheet" href="assets/animaciones.css">
   </head>
-  <body>
 
+  <!-- --------------- INICIA EL BODY --------------- -->
+  <body>
+    <!-- -------- H E A D E R -------- -->
     <header>
-      <div class="header--container-title">
+      <!-- Header Logotipo -->
+      <div class="header__container-title">
         <img src="assets/img/Popcorns-logo.png" alt="Logo" class="header--logo">
         <h1>Cine Fernández</h1>
       </div>
 
+      <!-- Header Nav -->
       <nav>
+
+        <!-- Header Toggle-Menu -->
         <label for="toggle-menu" class="toggle-menu"><i class="fa-solid fa-bars" style="color: #fffffe;"></i></label>
         <input type="checkbox" id="toggle-menu">
-        <ul class="navbar-list">
+
+        <!-- Header Toggle-Cuenta-->
+        <label for="toggle-cuenta" class="toggle-cuenta"><i class="fa-solid fa-user" style="color: #ffffff;"></i></label>
+        <input type="checkbox" id="toggle-cuenta">
+        <!-- AGREGAMOS UN DIV VACÍO DE CLASE OVERLAY PARA EFECTO GLASS AL ABRIR NUESTRO MENÚ HAMBURGUESA Y CARRITO -->
+        <div class="overlay"></div>
+
+        <!-- Header Navbar-List -->
+        <ul class="header__navbar-list">
           <li><a href="#hero">Inicio</a></li>
           <li><a href="#about">Acerca de</a></li>
-          <li><a href="#cards">Promociones</a></li>
+          <li><a href="#promos">Promociones</a></li>
           <li><a href="#contacto">Contactanos</a></li>
-          <li class="separador-li"></li>
-          <div class="btns">
-            <button class="btn btn-account">Regístrarse</button>
-            <button class="btn btn-account">Iniciar Sesion </button>
+          <li class="header--separador-li"></li>
+          <div class="header__container-btns dentro-menu-hamburguesa">
+            <p>¿Que desea hacer?</p>
+            <button class="btn header--btn">Iniciar Sesión </button>
+            <button class="btn header--btn">Regístrarse</button>
           </div>
         </ul>
+
+        <!-- Header Botones-->
+        <div class="header__container-btns dentro-icono-cuenta">
+          <p>¿Que desea hacer?</p>
+          <a class="btn header--btn" href="assets/login.html">Iniciar Sesión</a>
+          <a class="btn header--btn" href="assets/registrarse.html">Regístrarse</a>
+        </div>
       </nav>
     </header>
 
+
+    <!-- -------- M A I N -------- -->
     <main>
-      <!-- Seccion Hero -->
+
+      <!-- SECCION HERO -->
       <section id="hero">
         <div class="hero__info">
           <h2>¡<span>Bienvenido al Cine Fernández:</span> Tu destino para una experiencia cinematográfica épica!</h2>
           <p>Disfruta la magia del cine en pantalla grande y vive emociones intensas con las mejores películas.</p>
           <button class="btn btn-catalogo">Ver Catalogo</button>
         </div>
-
       </section>
 
-      <!-- Seccion About -->
-      <section id="about">
-        <h2>Acerca de Nosotros</h2>
-        <h3 class="about__mision">Nuestra misión es brindarte la mejor experiencia cinematográfica en la comodidad de nuestras modernas salas.</h3>
 
-        <div class="about__caracteristicas">
+      <!-- SECCION ABOUT -->
+      <section id="about">
+        <h2 class="about--title">Acerca de Nosotros</h2>
+        <h3 class="about--mision">Nuestra misión es brindarte la mejor experiencia cinematográfica en la comodidad de nuestras modernas salas.</h3>
+
+        <!-- About Caracteristicas -->
+        <div class="about__caracteristicas caracteristica-uno">
           <img src="assets/img/Dolby-Cinema.jpg" alt="">
           <div class="about__caracteristicas__info">
             <h3>Experiencia inmersiva</h3>
@@ -58,7 +86,7 @@
           </div>
         </div>
 
-        <div class="about__caracteristicas">
+        <div class="about__caracteristicas caracteristica-dos">
           <div class="about__caracteristicas__info">
             <h3>Comodidad</h3>
             <p>En el Cine Fernández, tu comodidad es nuestra prioridad. Cada asiento de cada fila del cine ha sido diseñado por expertos para que puedas relajarte y reclinarte durante la película. Con menos asientos y más espacios, tendrás una experiencia más personal e inmersiva en cada visita.</p>
@@ -66,7 +94,7 @@
           <img src="assets/img/butacas-about-caracteristicas.jpg" alt="">
         </div>
 
-        <div class="about__caracteristicas">
+        <div class="about__caracteristicas caracteristica-tres">
           <img src="assets/img/Poster-Semana-Tematica.png" alt="">
           <div class="about__caracteristicas__info">
             <h3>Semanas temáticas</h3>
@@ -76,54 +104,61 @@
 
       </section>
 
-      <!-- Seccion Cards -->
-      <section id="cards">
-        <h2>Ofertas y Sorteos</h2>
 
-        <div class="container__cards">
+      <!-- SECCION PROMOS -->
+      <section id="promos">
+        <!-- Seccion Promo Titulo -->
+        <h2 class="promos--title">Ofertas y Sorteos</h2>
 
-          <div class="card">
-            <div class="card__info">
-              <img src="assets/img/Spiderman-promo.jpg" alt="">
+        <!-- Seccion Promo Contenedor de Tarjetas -->
+        <div class="promos__container-cards">
+
+          <div class="promos__card">
+            <div class="promos__card__info">
+              <img src="assets/img/Spiderman-promo.jpg" alt="Afiche promocion Spider-Man">
               <h3>Gana un kit de merchandising de Spiderman</h3>
               <p>Compra ya tus entradas online para ver la película y participa hasta el 18 de junio. ¡Y si compras tus entradas para el fin de semana del estreno, también podrás llevarte un póster de la película! ¡Date prisa y usa tus superpoderes para ganar!</p>
             </div>
-            <a href="#">!Mas Info¡</a>
+            <a href="#" class="promos__card--link">!Mas Info¡</a>
           </div>
 
-          <div class="card">
-            <div class="card__info">
-              <img src="assets/img/oferta-pack-familia.jpg" alt="">
+          <div class="promos__card">
+            <div class="promos__card__info">
+              <img src="assets/img/oferta-pack-familia.jpg" alt="Afiche promocion familiar">
               <h3>Cine en familia al mejor precio</h3>
               <p>Disfruta de un mejor precio en tus entradas para el cine si vas en familia. Pueden acceder a la promoción todos los días de la semana para funciones hasta las 21:00 ¡Válido para un mínimo de dos personas!</p>
             </div>
-            <a href="#">!Mas info¡</a>
+            <a href="#" class="promos__card--link">!Mas info¡</a>
           </div>
 
-          <div class="card">
-            <div class="card__info">
-              <img src="assets/img/unlimited-card.jpg" alt="">
+          <div class="promos__card">
+            <div class="promos__card__info">
+              <img src="assets/img/unlimited-card.jpg" alt="Afiche promocion suscripcion">
               <h3>¡PARA AUTÉNTICOS FANS DEL CINE!</h3>
               <p>¡Lo estabas esperando! Suscríbete y podrás disfrutar de las mejores historias y emociones en pantalla grande, todas las veces que quieras, ¡estrenos incluidos! </p>
             </div>
-            <a href="#">!Lo Quiero¡</a>
+            <a href="#" class="promos__card--link">!Lo Quiero¡</a>
           </div>
         </div>
         
-        <button class="btn">Ver todas las ofertas y sorteos</button>
+        <!-- Seccion Promo Boton-Ver Mas -->
+        <button class="btn btn-promos">Ver todas las ofertas y sorteos</button>
       </section>
+
 
       <!-- Seccion Contacto -->
       <section id="contacto">
-        <h2>Donde Estamos</h2>
-        <div class="contacto__container-info">
-          <ul class="lista-info">
+        <h2 class="contacto--title">Donde Estamos</h2>
+        <!-- Contenedor contacto -->
+        <div class="contacto__container">
+          <!-- Lista Contacto -->
+          <ul class="contacto__lista-info">
             <li>Calle cualquiera 117</li>
             <li>Fernández</li>
             <li>Santiago del Estero</li>
             <li>+54 9 385 XXX XXXX</li>
             <li>consultas@cinefernandez.com</li>
-            <li class="contacto__redes-sociales">
+            <li class="contacto__lista-info__item-container-redes">
               <p>Visita nuestras redes sociales </p>
               <div>
                 <a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
@@ -134,19 +169,30 @@
               </div>
             </li>
           </ul>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14101.189411660202!2d-63.897634!3d-27.9235281!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b14c1e67f449b%3A0x1e1fde45cd5b0a6!2sFern%C3%A1ndez%2C%20Santiago%20del%20Estero!5e0!3m2!1ses-419!2sar!4v1686752920124!5m2!1ses-419!2sar" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <!-- Mapa` Contacto -->
+          <div class="contacto--mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14101.189411660202!2d-63.897634!3d-27.9235281!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b14c1e67f449b%3A0x1e1fde45cd5b0a6!2sFern%C3%A1ndez%2C%20Santiago%20del%20Estero!5e0!3m2!1ses-419!2sar!4v1686752920124!5m2!1ses-419!2sar"   style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </section>
+
     </main>
 
+    <!-- -------- F O O T E R -------- -->
     <footer>
+
+      <!-- Footer Seccion - Info -->
       <section class="footer__seccion-info">
+        <!-- Footer Encabezado -->
         <div class="footer__info-encabezado">
+          <!-- Footer Encabezado - Logo -->
           <div class="footer__info-encabezado--title">
             <img src="assets/img/Popcorns-logo.png" alt="Logo" class="header--logo">
             <h1>Cine Fernández</h1>
           </div>
           
+          <!-- Footer Encabezado - Redes -->
           <div class="footer__info-encabezado--redes">
             <a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
             
@@ -156,6 +202,7 @@
           </div>
         </div>
         
+        <!-- Footer Cartelera -->
         <div class="footer__info-cartelera">
           <h5>Cartelera</h5>
           <ul>
@@ -166,6 +213,7 @@
           </ul>
         </div>
 
+        <!-- Footer Info gral -->
         <div class="footer__info-cine">
           <h5>Cines</h5>
           <ul>
@@ -175,6 +223,7 @@
           </ul>
         </div>
 
+        <!-- Footer Legale -->
         <div class="footer__info-legales">
           <h5>Legales</h5>
           <ul>
@@ -183,9 +232,9 @@
             <li><a href="#">Política de Cookies</a></li>
           </ul>
         </div>
-
       </section>
 
+      <!-- Footer Seccion - Creador -->
       <section class="footer__seccion-creador">
         <h5>Hecho con <i class="fa-solid fa-heart" style="color: #ff0000;"></i> by Giuli</h5>
       </section>

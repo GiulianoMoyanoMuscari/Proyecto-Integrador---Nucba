@@ -25,54 +25,89 @@
   scroll-padding-top: 63px;
 }
 
+html{
+  font-size: 32px;
+}
+
 body{
   background-color: var(--background);
 }
 
-/* H E A D E R */
+/* ---------- H E A D E R ---------- */
 header{
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   border-bottom: 1px solid var(--red);
-  /* box-shadow: 0px 8px 24px rgba(229, 49, 112, 0.2); */
   background-color: var(--background);
 }
 
-
-.header--logo{
-  width: 53px;
-}
-
-.header--container-title{
+/* --- Header Logotipo --- */
+.header__container-title{
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.navbar-list{
+.header--logo{
+  width: 2.5rem;
+}
+
+.header__container-title h1{
+  font-size: 2rem;
+}
+
+
+/* --- Header Nav --- */
+/* Header Toggle */
+.toggle-menu,
+.close-toggle-menu,
+.toggle-cuenta{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* Esto es para ocultar los iconos y checkbox de menu hamburguesa y cuenta */
+#toggle-menu,
+.toggle-menu,
+#toggle-cuenta,
+.toggle-cuenta{
+  display: none;
+}
+
+nav{
+  display: flex;
+  gap: 25px;
+}
+
+/* Header Navbar-List */
+.header__navbar-list{
   display: flex;
   align-items: center;
   gap: 25px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
-.separador-li{
-  width: 1px;
-  height: 1.2rem;
+.header--separador-li{
+  width: 2px;
+  height: 1.5rem;
   background-color: white ;
-  
 }
 
-.btns{
+/* Header Navbar-List > Botones */
+.header__container-btns{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
+}
+
+.header__container-btns p{
+  display: none;
+  font-size: 1.15rem;
 }
 
 .btn{
@@ -82,49 +117,40 @@ header{
   border: none;
   font-size: 1.15rem;
   font-weight: 600;
+  width: 8.5rem;
 }
 
-.btn-account{
+.header--btn{
   background-color: var(--red);
-  padding: 5px 10px ;
-  border-radius: 0px;
 }
 
-.btn:first-child{
+.header--btn:last-child{
   background-color: var(--bkg-tertiary);
 }
 
-
-/* Esto es para el icono de cuenta */
-nav i{
-  font-size: 28px;
-  cursor: pointer;
-  padding: 0 20px;
-}
-
-/* Esto es para ocultar los iconos y checkbox de menu hamburguesa y cuenta */
-#toggle-menu,
-.toggle-menu{
+.dentro-menu-hamburguesa{
   display: none;
 }
 
 
-/* M A I N */
-/* Seccion Hero */
+/* ---------- M A I N ---------- */
+/*  ---- SECCION HERO ---- */
 #hero{
   background-image: url(img/Cine-hero.png);
   background-size: 100vw;
   background-repeat: no-repeat;
   background-position:center ;
-  padding: 110px 20px;
+  padding: 110px 4rem;
+  margin-bottom: 50px;
 }
 
 .hero__info{
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 .hero__info h2{
   font-size: 2rem;
 }
@@ -137,33 +163,37 @@ nav i{
 
 .btn-catalogo{
   background-color: var(--red);
-  width: 200px;
-  padding: 10px 15px;
+  font-size: 1.3rem;
+  padding: 15px 20px;
+  width: 10rem;
 }
 
-/* Seccion About */
+
+
+/*  ---- SECCION ABOUT ---- */
 #about{
-  padding: 70px 20px;
+  padding: 80px 30px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
   align-items: center;
   justify-content: center;
 }
 
-#about h2{
+.about--title{
   font-size: 1.8rem;
 }
 
-.about__mision{
+.about--mision{
   font-style: italic;
   text-align: center;
 }
 
+/* About Caracteristicas */
 .about__caracteristicas{
   display: flex;
   justify-content: space-evenly;
-  max-width: 1600px;
+  max-width: 1850px;
 }
 
 .about__caracteristicas img{
@@ -183,9 +213,12 @@ nav i{
   color: var(--parrafo);
 }
 
-/* Seccion Cards */
-#cards{
-  padding: 70px 20px;
+
+
+
+/*  ---- SECCION PROMOS ---- */
+#promos{
+  padding: 70px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -193,101 +226,112 @@ nav i{
   gap: 50px;
 }
 
-#cards h2{
+.promos--title{
   font-size: 1.8rem;
 }
 
-#cards p{
-  font-size: 1.2rem;
-  color: var(--parrafo);
-}
-
-.container__cards{
+/* -- Contenedor Promo-Cards -- */
+.promos__container-cards{
   display: flex;
   justify-content: center;
   width: 100%;
-  gap: 50px;
+  gap: 2rem;
 }
 
-.card{
+/* Promo Card */
+.promos__card{
   width: 30%;
-  max-width: 400px;
-  height: 500px;
-  /* box-shadow: 0px 8px 24px rgba(229, 49, 112, 0.2); */
+  max-width: 600px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 50px;
   border: 1px solid gray;
   border-bottom-right-radius: 50px;
 }
 
-.card__info{
+/* Promo Card-Info */
+.promos__card__info{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-.card__info img{
-  max-width: 370px;
+.promos__card__info img{
   width: 100%;
 }
 
-.card__info p{
+.promos__card__info p{
   color: var(--parrafo);
 }
 
-#cards button{
+.promos__card--link{
+  font-weight: 700;
+}
+
+/* -- Promo Boton Ver Mas -- */
+.btn-promos{
   padding: 10px 20px;
   background-color: var(--orange);
   border: none;
-  font-size: 1.18rem;
-  border-radius: 10px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  width: 13rem;
 }
 
 
-/* Seccion Contacto */
+/*  ---- SECCION CONTACTO ---- */
 #contacto{
-  padding: 70px 20px;
+  padding: 70px 30px;
 }
 
-#contacto h2{
+.contacto--title{
   text-align: center;
   padding-bottom: 60px;
   font-size: 1.8rem;
 }
 
-.contacto__container-info{
+.contacto__container{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 2rem;
 }
 
-iframe{
-  width: 40%;
-  max-width: 800px;
+
+.contacto__lista-info{
+  width: 35%;
 }
 
-.lista-info{
-  width: 40%;
-  max-width: 800px;
-}
-
-.lista-info li{
-  margin: 15px 0;
+.contacto__lista-info li{
+  margin: 25px 0px;
 }
 
 /* Iconos de redes sociales */
-.contacto__redes-sociales{
+.contacto__lista-info__item-container-redes{
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
-.contacto__redes-sociales i{
-  font-size: 32px;
+.contacto__lista-info__item-container-redes i{
+  font-size: 1.5rem;
   padding: 0 5px;
+}
+
+/* Mapa */
+.contacto--mapa{
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contacto--mapa iframe{
+  width: 100%;
+  height: 500px;
 }
 
 
@@ -299,10 +343,9 @@ footer{
 /* Seccion Info */
 .footer__seccion-info{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: 30% repeat(3,1fr);
   justify-items: center;
-  padding: 30px 0;
-  max-width: 1600px;
+  padding: 30px 20px;
   margin: auto;
 }
 
@@ -317,7 +360,10 @@ footer{
   display: flex;
   gap: 30px;
   justify-content: center;
-  font-size: 22px;
+}
+
+.footer__info-encabezado--redes i{
+  font-size: 1.5rem;
 }
 
 .footer__seccion-info h5{
