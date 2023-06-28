@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Cine Fernández</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <!-- --------------- INICIA EL BODY --------------- -->
+
+  <body>
+    <!-- -------- H E A D E R -------- -->
+    <header>
+      <div class="header__container-title">
+        <img
+          src="img/Popcorns-logo.png"
+          alt="Logo"
+          class="header--logo"
+        />
+        <h1>Cine Fernández</h1>
+      </div>
+
+      <button class="header--boton">
+        <i class="fa-solid fa-arrow-left" style="color: #e53170"></i>
+        <a href="../index.html">Volver a Inicio</a>
+      </button>
+    </header>
+
+    <!-- -------- M A I N -------- -->
+    <main>
+      <section id="login">
+        <!-- Contenido -->
+        <div class="login__container">
+
+          <!-- Titulo -->
+          <h2 class="login--title">Iniciar Sesión con</h2>
+
+          <!-- Contenedor redes sociales -->
+          <div class="login__container-redes">
+            <a href="#"
+              ><i class="fa-brands fa-facebook" style="color: #005eff"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-google-plus" style="color: #ff0026"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-twitter" style="color: #0084ff"></i
+            ></a>
+          </div>
+          
+          <!-- Formulario -->
+          <form class="login__form" action="index.html">
+            <h3>o inicia sesión con tu cuenta</h3>
+
+            <input class="form--input input-email" placeholder="&#xf0e0; Email" type="email" required/>
+
+            <input class="form--input input-text" placeholder="&#xf023; Password" type="password" required minlength="8"/>
+
+            <a class="form--link-password" href="#">¿Olvidaste tu contraseña?</a>
+
+            <input type="submit" value="Iniciar Sesión" class="form--boton"/>
+
+            <p>
+              ¿No tienes tu cuenta? <a class="form--link-registrarse" href="registrarse.html">Regístrate</a>
+            </p>
+          </form>
+
+        </div>
+
+        <!-- Imagen -->
+        <img class="login--img" src="img/login-main.png" alt="Imagen de decoracion - Magia del Cine" />
+      </section>
+    </main>
+
+    <!-- -------- F O O T E R -------- -->
+    <footer>
+      <!-- Footer Seccion - Info -->
+      <section class="footer__seccion-info">
+        <!-- Footer Encabezado -->
+        <div class="footer__info-encabezado">
+
+          <!-- Footer Encabezado - Logo -->
+          <div class="footer__info-encabezado--title">
+            <img
+              src="img/Popcorns-logo.png"
+              alt="Logo"
+              class="header--logo"
+            />
+            <h1>Cine Fernández</h1>
+          </div>
+
+          <!-- Footer Encabezado - Redes -->
+          <div class="footer__info-encabezado--redes">
+            <a href="#"
+              ><i class="fa-brands fa-facebook" style="color: #ffffff"></i
+            ></a>
+
+            <a href="#"
+              ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-twitter" style="color: #ffffff"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-tiktok" style="color: #ffffff"></i
+            ></a>
+          </div>
+
+        </div>
+
+        <!-- Footer Cartelera -->
+        <div class="footer__info-cartelera">
+          <h5>Cartelera</h5>
+          <ul>
+            <li><a href="#">Peliculas en Cartelera</a></li>
+            <li><a href="#">Proximos Estrenos</a></li>
+            <li><a href="#">Ventas Anticipadas</a></li>
+            <li><a href="#">Semanas Tematicas</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Info gral -->
+        <div class="footer__info-cine">
+          <h5>Cines</h5>
+          <ul>
+            <li><a href="#">Informacion General</a></li>
+            <li><a href="#">Promociones</a></li>
+            <li><a href="#">Venta Online</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Legale -->
+        <div class="footer__info-legales">
+          <h5>Legales</h5>
+          <ul>
+            <li><a href="#">Aviso Legal</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Política de Cookies</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Footer Seccion - Creador -->
+      <section class="footer__seccion-creador">
+        <h5>
+          Hecho con <i class="fa-solid fa-heart" style="color: #ff0000"></i> by
+          Giuli
+        </h5>
+      </section>
+    </footer>
+  </body>
+</html>
